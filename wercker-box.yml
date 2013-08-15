@@ -1,5 +1,6 @@
 name: ubuntu12.04-ansbile
-version: 0.0.1
+version: 0.0.2
+inherits: wercker/python
 description: Base box to use for running ansible playbooks
 type : main
 platform : ubuntu@12.04
@@ -10,6 +11,7 @@ packages :
 script : |
   sudo apt-get update
   sudo apt-get install git build-essential python-jinja2 python-paramiko  python-yaml -y
+  sudo pip install python-apt
   git clone git://github.com/ansible/ansible.git
   cd ansible
   git checkout v1.2.2 
