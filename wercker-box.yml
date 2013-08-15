@@ -9,7 +9,7 @@ packages :
   - ansible@1.2.2
 script : |
   sudo apt-get update
-  sudo apt-get install git build-essential python-jinja2 python-paramiko  python-yaml -y
+  sudo apt-get install git build-essential python-jinja2 python-paramiko python-apt python-yaml -y
   git clone git://github.com/ansible/ansible.git
   cd ansible
   git checkout v1.2.2 
